@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  
+  <body onload="fetchCart()">
+    <header class="main-header">
+      <nav class="main-header__nav">
+        <ul class="main-header__item-list">
+          <li><b>PRODUCTS</b></li>
+          <li class="main-header__item"><a href="/signin" > ADMIN LOGIN</a></li>
+          <!-- <li class="main-header__item">userProduct</li> -->
+          <!-- <li class="main-header__item">CART</a></li> -->
+          <li class="main-header__item"><a href="/signin">USER</a></li>
+
+        </ul>
+      </nav>
+      <div>
+        <table>
+          <thead>
+          <tr>
+            <td><b>title</b></td>
+            <td><b>price</b></td>
+            <td><b>imageUrl</b></td>
+            <td><b>description</b></td>
+            
+          </tr>
+          
+        </thead>
+        <tbody id="productTableBody">
+          
+        </tbody>
+        <a href="/signin">Add item to cart</a>
+      </table>
+      
+      
+      </div>
+      
+    </header>
+    
+    
+  </body>
+  <script src="/javascripts/axios.js"></script>
+  <script src="/javascripts/mainProduct.js"></script>
+    <!-- <script src="/javascripts/fetchproduct.js"></script> -->
+</html>

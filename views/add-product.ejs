@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title><%= title%></title>
+
+    <style>
+        #body-container{
+            margin: 0%;
+            padding: 0% 20%;
+            background-color: darkcyan;
+        }
+    </style>
+</head>
+<body>
+    <div id="body-container">
+        <h1>ADD PRODUCT</h1>
+        <br>
+        <br>
+        <input type="text" id="title" placeholder="productName" >
+        <br>
+        <br>
+        <input type="text" id="price" placeholder="PRICE">
+        <br>
+        <br>
+
+        <input type="text" id="imageUrl" placeholder="IMageUrl">
+        <br>
+        <br>
+        <input type="text" id="description" placeholder="DESCRiption" >
+        <br>
+        <br>
+        <button type="button" id="btn" onClick="prods()">submit</button>
+    </div>
+    <a href="/admin-product">GO to products</a>
+    <script src="/javascripts/axios.js"></script>
+    <script src="/javascripts/prod.js"></script>
+    
+</body>
+</html>

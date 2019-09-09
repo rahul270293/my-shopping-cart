@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cart</title>
+</head>
+<body onload="fetchCart()">
+    
+        <table>
+                <thead>
+                <tr>
+                  <td><b>title</b></td>
+                  <td><b>price</b></td>
+                  <td><b>imageUrl</b></td>
+                  <!-- <td><b>description</b></td> -->
+                  <td><a href="/userProduct">Back to shop</a></td>
+                </tr>
+              </thead>
+              <tbody id="productTableBody">
+          
+            </tbody>
+                
+        </table>
+        <br>
+        <br>
+        <br>
+        <p><b>Total Ammount</b></p>
+        <p id="totalprice"></p>
+        <button><a href="/checkout">PAY Ammount</a></button>
+        <button type="button" id="btn" onClick="logout()">LOGOUT</a></button>   
+        
+       
+           
+</body>
+<script src="/javascripts/axios.js"></script>
+<script src="/javascripts/cart.js"></script>
+<script src="/javascripts/signin.js"></script>
+</html>

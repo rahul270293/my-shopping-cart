@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Products</title>
+</head>
+<body onload="fetchProds()">
+    <a href="/add-product">ADD Products</a>
+    <button type="button" id="btn" onClick="logout()">LOGOUT</a></button> 
+    
+        <table>
+                <thead>
+                <tr>
+                  <td><b>title</b></td>
+                  <td><b>price</b></td>
+                  <td><b>imageUrl</b></td>
+                  <td><b>description</b></td>
+                </tr>
+              </thead>
+              <tbody id="productTableBody">
+          
+            </tbody>
+
+        </table>    
+            
+       
+           
+</body>
+<script src="/javascripts/axios.js"></script>
+<script src="/javascripts/fetchproduct.js"></script>
+<script src="/javascripts/signin.js"></script>
+<!-- <script src="/javascripts/signin.js"></script> -->
+</html>
