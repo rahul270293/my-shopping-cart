@@ -13,6 +13,13 @@
             background-color: darkcyan;
         }
     </style>
+     <script type="text/javascript">
+        function preventBack(){
+          window.history.forword();
+          setTimeout('preventBack(),0')
+          window.onload = function(){ null };
+        }
+        </script>
 </head>
 <body>
     <div id="body-container">

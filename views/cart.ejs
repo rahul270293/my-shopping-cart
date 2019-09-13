@@ -1,12 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Cart</title>
+    <script type="text/javascript">
+      function preventBack(){
+        window.history.forword();
+        setTimeout('preventBack(),0')
+        window.onload = function(){ null };
+      }
+      noBack();
+window.onload = noBack;
+window.onpageshow = function(evt){ if(evt.persisted) noBack(); }
+window.onunload = function(){ void(0); }
+if(localStorage.getItem('jwtToken')){
+    location.replace('/')
+}
+      </script>
 </head>
-<body onload="fetchCart()">
+<body  onload="fetchCart()">
     
         <table>
                 <thead>
@@ -28,7 +43,22 @@
         <br>
         <p><b>Total Ammount</b></p>
         <p id="totalprice"></p>
-        <button><a href="/checkout">PAY Ammount</a></button>
+        <div>
+          <form action="/cart" method="POST">
+            <script src="http://checkout.stripe.com/checkout.js" class="stripe-button"
+            data-key="pk_test_Q5Ip71OF4P2ywWAd946FKwKR00WX2VvgLj"
+            data-ammount="totalprice"
+            data-name="your orders"
+            data-description="all the items you ordered"
+            data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+            data-local="auto"
+            data-currency="INR" >
+              </script>
+
+          </form>
+        </div>
+        <!-- <button><a href="/checkout">PAY Ammount</a></button> -->
+        <br>
         <button type="button" id="btn" onClick="logout()">LOGOUT</a></button>   
         
        

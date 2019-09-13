@@ -73,6 +73,7 @@ function updateRow(id,jf){
     .then((saved)=>{
         if(saved.data.status){
             alert(saved.data.message)
+            window.location="/admin-product"
         }else{
             alert(saved.data.message)
         }

@@ -5,6 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Products</title>
+    <script type="text/javascript">
+         noBack();
+window.onload = noBack;
+window.onpageshow = function(evt){ if(evt.persisted) noBack(); }
+window.onunload = function(){ void(0); }
+if(localStorage.getItem('jwtToken')){
+    location.replace('/')
+}
+        
+        </script>
 </head>
 <body onload="fetchProds()">
     <a href="/add-product">ADD Products</a>

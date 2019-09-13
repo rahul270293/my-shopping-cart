@@ -4,6 +4,13 @@
   <head>
     <title><%= title %></title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script type="text/javascript">
+      function preventBack(){
+        window.history.forword();
+        setTimeout('preventBack(),0')
+        window.onload = function(){ null };
+      }
+      </script>
   </head>
   
   <body onload="fetchCart()">

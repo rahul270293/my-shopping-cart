@@ -8,6 +8,8 @@ var logger = require('morgan');
 const keyPublishable ='pk_test_Q5Ip71OF4P2ywWAd946FKwKR00WX2VvgLj';
 const keySecret = 'sk_test_90sFIAejd2XtMYsBjMwVNEjc000tpFiNNt'; 
 
+console.log('ka==hal==ba==re===',keyPublishable,keySecret)
+
 var shopRouter = require('./routes/user');
 var adminRouter = require('./routes/api');
 

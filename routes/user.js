@@ -4,10 +4,18 @@ var User = require('../model/user');
 
 var jwt = require('jsonwebtoken')
 
+
+//forcing on page after login
+
+// var isAuth =((req,res,next)=>{
+//  console.log('ttattatattatattattat',req.User)
+
+// })
+
 /* GET home page. */
 //token verification
  var verifyToken=((req,res,next)=>{
-   console.log('========aaoge jab tum======',req.cookies.jwtToken)
+  //  console.log('========aaoge jab tum======',req.cookies.jwtToken)
    if(req.cookies.jwtToken !==undefined ){
   var token = req.cookies.jwtToken[0];
   // console.log('=============mdmdmdmdmdmdmmdmdmd========',token)
@@ -73,7 +81,7 @@ router.get('/signup',function(req,res,next){
   res.render('signup',{title:'signup'})
 })
 
-router.get('/signin',function(req,res,next){
+router.get('/signin' ,function(req,res,next){
   res.render('signin',{title:'signin'})
 })
 

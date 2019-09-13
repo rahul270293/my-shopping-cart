@@ -20,6 +20,26 @@
             background-color: antiquewhite
         }
     </style>
+     <script type="text/javascript">
+        function preventBack(){
+          window.history.forword();
+          setTimeout('preventBack(),0')
+          window.onload = function(){ null };
+        }
+        function noBack()
+{
+   window.history.forward()
+}
+noBack();
+window.onload = noBack;
+window.onpageshow = function(evt){ if(evt.persisted) noBack(); }
+window.onunload = function(){ void(0); }
+if(localStorage.getItem('jwtToken')){
+    location.replace('/userProduct')
+}else{
+
+}
+        </script>
 </head>
 <body>
     <div class="box-container">
